@@ -11,7 +11,7 @@ const CONFIG = {
   },
   telefono: "34666840005",
   instagram: "https://instagram.com/",
-  facebook: "https://facebook.com/"
+  facebook: "https://www.facebook.com/share/1KVNyzWesu/"
 };
 
 const PRODUCTOS = {
