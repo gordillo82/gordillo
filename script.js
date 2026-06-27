@@ -39,10 +39,32 @@ function cat(id, btn) {
 }
 
 // ==========================================
+// CAMBIO DE SUBCATEGORÍAS (BEBIDAS)
+// ==========================================
+function subcat(id, btn) {
+  // Ocultar todos los subcontenedores
+  document.querySelectorAll('.subcategorias-container').forEach(container => {
+    container.classList.add('oculto');
+  });
+  
+  // Mostrar el subcontenedor seleccionado
+  const container = document.getElementById(id + '-subcont');
+  if (container) {
+    container.classList.remove('oculto');
+  }
+  
+  // Actualizar botón activo
+  document.querySelectorAll('.subcategorias button').forEach(b => {
+    b.classList.remove('active-subcat');
+  });
+  if (btn) btn.classList.add('active-subcat');
+}
+
+// ==========================================
 // GENERAR PRODUCTOS DESDE DATOS
 // ==========================================
 function generarProductos() {
-  const categorias = ['cafes', 'tapas', 'principales', 'postres', 'bebidas'];
+  const categorias = ['cafes', 'tapas', 'principales', 'postres'];
   
   categorias.forEach(categoria => {
     const container = document.getElementById(categoria + '-container');
@@ -78,6 +100,72 @@ function generarProductos() {
             ${alergenosText ? `<small>${alergenosText}</small>` : ''}
           </div>
           <strong>${precioText}</strong>
+        `;
+        
+        container.appendChild(productoHTML);
+      });
+    }
+  });
+
+  // Generar bebidas con submenús
+  generarBebidas();
+}
+
+// ==========================================
+// GENERAR BEBIDAS CON SUBMENÚS
+// ==========================================
+function generarBebidas() {
+  const subcategorias = ['tintos', 'blancos', 'cervezas', 'refrescos', 'aguas'];
+  
+  subcategorias.forEach(subcategoria => {
+    const container = document.getElementById(subcategoria + '-subcont');
+    const productos = PRODUCTOS.bebidas[subcategoria];
+    
+    if (container && productos) {
+      container.innerHTML = '';
+      
+      productos.forEach(producto => {
+        const productoHTML = document.createElement('div');
+        productoHTML.className = 'producto';
+        
+        // Procesar alérgenos
+        let alergenosText = '';
+        if (producto.alergenos) {
+          const codigosAlergenos = producto.alergenos.split(',').map(c => c.trim());
+          alergenosText = codigosAlergenos
+            .map(codigo => ALERGENOS[codigo] || codigo)
+            .join(' · ');
+        }
+        
+        // Mostrar precios según el tipo
+        let precioHTML = '';
+        if (producto.precio_copa && producto.precio_botella) {
+          // Vinos con precio de copa y botella
+          precioHTML = `
+            <div class="producto-precios">
+              <div>
+                <strong>${producto.precio_copa}€</strong>
+                <small>Copa</small>
+              </div>
+              <div>
+                <strong>${producto.precio_botella}€</strong>
+                <small>Botella</small>
+              </div>
+            </div>
+          `;
+        } else if (producto.precio) {
+          // Otras bebidas
+          const sufijo = producto.por_unidad ? '€/u' : '€';
+          precioHTML = `<strong>${producto.precio} ${sufijo}</strong>`;
+        }
+        
+        productoHTML.innerHTML = `
+          <div>
+            <h3>${producto.nombre}</h3>
+            <p>${producto.descripcion}</p>
+            ${alergenosText ? `<small>${alergenosText}</small>` : ''}
+          </div>
+          ${precioHTML}
         `;
         
         container.appendChild(productoHTML);
