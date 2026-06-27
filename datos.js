@@ -7,13 +7,15 @@ const PRODUCTOS = {
       nombre: "Espresso",
       descripcion: "Café 100% arábica recién molido.",
       precio: "1,50",
-      alergenos: ""
+      alergenos: "",
+      por_unidad: false
     },
     {
       nombre: "Cafe con leche",
       descripcion: "Café 100% arábica recién molido.",
       precio: "1,80",
-      alergenos: "L"
+      alergenos: "L",
+      por_unidad: false
     }
   ],
   
@@ -22,13 +24,15 @@ const PRODUCTOS = {
       nombre: "Patatas Bravas",
       descripcion: "Con salsa casera.",
       precio: "5,00",
-      alergenos: "H"
+      alergenos: "H",
+      por_unidad: false
     },
     {
       nombre: "Croquetas de jamon",
       descripcion: "Con una bechamel secreta.",
       precio: "3,00",
-      alergenos: "H,L"
+      alergenos: "H,L",
+      por_unidad: true
     }
   ],
   
@@ -37,7 +41,8 @@ const PRODUCTOS = {
       nombre: "Próximamente",
       descripcion: "Nuevos platos principales.",
       precio: "",
-      alergenos: ""
+      alergenos: "",
+      por_unidad: false
     }
   ],
   
@@ -46,7 +51,8 @@ const PRODUCTOS = {
       nombre: "Próximamente",
       descripcion: "Nuestros postres caseros.",
       precio: "",
-      alergenos: ""
+      alergenos: "",
+      por_unidad: false
     }
   ],
   
@@ -55,7 +61,8 @@ const PRODUCTOS = {
       nombre: "Agua",
       descripcion: "Botella 50 cl.",
       precio: "1,50",
-      alergenos: ""
+      alergenos: "",
+      por_unidad: false
     }
   ]
 };
