@@ -25,25 +25,30 @@
   <p>Un lugar para disfrutar del café, las tapas y los pequeños momentos que hacen grande el día.</p>
 
   <button onclick="mostrarCarta()">VER CARTA</button>
-
-  <a class="link" id="mapsLink" href="#" target="_blank" rel="noopener">📍 Cómo llegar</a>
 </div>
 
 </section>
 
 <section id="carta" class="screen">
 
-<header>
+<header class="premium-header">
 <button onclick="mostrarInicio()">← Inicio</button>
 <h2>Nuestra Carta</h2>
 </header>
 
 <nav class="categorias">
-<button onclick="cat('cafes')">Cafés</button>
-<button onclick="cat('tapas')">Tapas</button>
-<button onclick="cat('bebidas')">Bebidas</button>
+<button class="active-cat" onclick="cat('cafes',this)">Cafés</button>
+<button onclick="cat('tapas',this)">Tapas</button>
+<button onclick="cat('principales',this)">Principales</button>
+<button onclick="cat('postres',this)">Postres</button>
+<button onclick="cat('bebidas',this)">Bebidas</button>
 </nav>
 
+<!-- ===================================================== -->
+<!-- ====================== CAFÉS ========================= -->
+<!-- ===================================================== -->
+
+<!-- COPIAR ESTE BLOQUE PARA AÑADIR OTRO PRODUCTO -->
 <div id="cafes" class="grupo">
 <div class="producto">
 <div>
@@ -55,6 +60,22 @@
 </div>
 </div>
 
+<div id="cafes" class="grupo">
+<div class="producto">
+<div>
+<h3>Cortado</h3>
+<p>Café 100% arábica recién molido.</p>
+<small>☕ Café</small>
+</div>
+<strong>1,80 €</strong>
+</div>
+</div>
+
+<!-- ===================================================== -->
+<!-- ====================== TAPAS ========================= -->
+<!-- ===================================================== -->
+
+<!-- COPIAR ESTE BLOQUE PARA AÑADIR OTRO PRODUCTO -->
 <div id="tapas" class="grupo oculto">
 <div class="producto">
 <div>
@@ -66,6 +87,30 @@
 </div>
 </div>
 
+
+<!-- ===================================================== -->
+<!-- ====================== PRINCIPALES ========================= -->
+<!-- ===================================================== -->
+
+<!-- COPIAR ESTE BLOQUE PARA AÑADIR OTRO PRODUCTO -->
+<div id="principales" class="grupo oculto">
+<div class="producto"><div><h3>Próximamente</h3><p>Nuevos platos principales.</p></div><strong></strong></div>
+</div>
+
+<!-- ===================================================== -->
+<!-- ====================== POSTRES ========================= -->
+<!-- ===================================================== -->
+
+<!-- COPIAR ESTE BLOQUE PARA AÑADIR OTRO PRODUCTO -->
+<div id="postres" class="grupo oculto">
+<div class="producto"><div><h3>Próximamente</h3><p>Nuestros postres caseros.</p></div><strong></strong></div>
+</div>
+
+<!-- ===================================================== -->
+<!-- ====================== BEBIDAS ========================= -->
+<!-- ===================================================== -->
+
+<!-- COPIAR ESTE BLOQUE PARA AÑADIR OTRO PRODUCTO -->
 <div id="bebidas" class="grupo oculto">
 <div class="producto">
 <div>
