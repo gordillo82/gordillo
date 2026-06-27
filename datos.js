@@ -4,12 +4,12 @@
 // ⚙️ CONFIGURACIÓN GENERAL DEL RESTAURANTE
 const CONFIG = {
   nombre: "La PAUsa",
-  ubicacion: "Calle Principal 123, Madrid, España",  // 👈 Edita aquí tu dirección
+  ubicacion: "Avenida Real de Madrid 57, 46017 Valencia, España",
   coordenadas: {
-    lat: 40.4168,   // Latitud (ej: Madrid)
-    lng: -3.7038    // Longitud (ej: Madrid)
+    lat: 39.43517579796773,
+    lng: -0.39142311970795846
   },
-  telefono: "34600000000",  // Sin el + al principio
+  telefono: "34666840005",
   instagram: "https://instagram.com/",
   facebook: "https://facebook.com/"
 };
