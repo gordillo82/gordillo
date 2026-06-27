@@ -92,14 +92,15 @@ generarProductos();
 // ==========================================
 // CONFIGURACIÓN DE ENLACES
 // ==========================================
-const LINKS = {
-  maps: "https://maps.google.com/",
-  instagram: "https://instagram.com/",
-  facebook: "https://facebook.com/",
-  whatsapp: "https://wa.me/34600000000"
-};
 
-document.getElementById('mapsIcon').href = LINKS.maps;
-document.getElementById('instagramIcon').href = LINKS.instagram;
-document.getElementById('facebookIcon').href = LINKS.facebook;
-document.getElementById('whatsappIcon').href = LINKS.whatsapp;
+// Google Maps - Abrir con coordenadas exactas
+document.getElementById('mapsIcon').href = `https://maps.google.com/?q=${CONFIG.coordenadas.lat},${CONFIG.coordenadas.lng}`;
+
+// Instagram
+document.getElementById('instagramIcon').href = CONFIG.instagram;
+
+// Facebook
+document.getElementById('facebookIcon').href = CONFIG.facebook;
+
+// WhatsApp
+document.getElementById('whatsappIcon').href = `https://wa.me/${CONFIG.telefono}`;
