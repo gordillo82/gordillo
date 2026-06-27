@@ -28,7 +28,7 @@ const PRODUCTOS = {
       nombre: "Croquetas de jamon",
       descripcion: "Con una bechamel secreta.",
       precio: "3,00",
-      alergenos: "H" "L"
+      alergenos: "H,L"
     }
   ],
   
