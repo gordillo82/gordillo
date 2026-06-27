@@ -1,5 +1,18 @@
-// 📋 ARCHIVO DE GESTIÓN DE PRODUCTOS - EDITA FÁCILMENTE AQUÍ
+// 📋 ARCHIVO DE GESTIÓN DE PRODUCTOS Y CONFIGURACIÓN - EDITA FÁCILMENTE AQUÍ
 // ============================================================
+
+// ⚙️ CONFIGURACIÓN GENERAL DEL RESTAURANTE
+const CONFIG = {
+  nombre: "La PAUsa",
+  ubicacion: "Calle Principal 123, Madrid, España",  // 👈 Edita aquí tu dirección
+  coordenadas: {
+    lat: 40.4168,   // Latitud (ej: Madrid)
+    lng: -3.7038    // Longitud (ej: Madrid)
+  },
+  telefono: "34600000000",  // Sin el + al principio
+  instagram: "https://instagram.com/",
+  facebook: "https://facebook.com/"
+};
 
 const PRODUCTOS = {
   cafes: [
