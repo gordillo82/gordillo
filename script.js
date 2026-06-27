@@ -17,7 +17,7 @@ function mostrarInicio() {
 }
 
 // ==========================================
-// CAMBIO DE CATEGORÍAS
+// CAMBIO DE CATEGORÍAS - ARREGLADO
 // ==========================================
 function cat(id, btn) {
   // Ocultar todos los contenedores
