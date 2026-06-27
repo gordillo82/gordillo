@@ -64,13 +64,20 @@ function generarProductos() {
             .join(' · ');
         }
         
+        // Procesar precio con sufijo €/u si es por unidad
+        let precioText = '';
+        if (producto.precio) {
+          const sufijo = producto.por_unidad ? '€/u' : '€';
+          precioText = producto.precio + ' ' + sufijo;
+        }
+        
         productoHTML.innerHTML = `
           <div>
             <h3>${producto.nombre}</h3>
             <p>${producto.descripcion}</p>
             ${alergenosText ? `<small>${alergenosText}</small>` : ''}
           </div>
-          <strong>${producto.precio ? producto.precio + ' €' : ''}</strong>
+          <strong>${precioText}</strong>
         `;
         
         container.appendChild(productoHTML);
