@@ -6,8 +6,8 @@ const CONFIG = {
   nombre: "La PAUsa",
   ubicacion: "Avenida Real de Madrid 57, 46017 Valencia, España",
   coordenadas: {
-    lat: 39.432867217652,
-    lng: -0.39150530401416084
+    lat: 39.4327179748581,
+    lng: -0.3915065557790821
   },
   telefono: "34666840005",
   instagram: "https://www.instagram.com/la_pausa_cafe_y_tapas?igsh=ZXNxNm5uNjl4MDl5",
